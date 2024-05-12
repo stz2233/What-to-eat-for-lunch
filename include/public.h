@@ -5,10 +5,11 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
+#include <functional>
 // 菜品类
 #include <iostream>
 
+#include<memory>
 class Dish
 {
 private:
@@ -49,19 +50,12 @@ private:
 
 public:
     Canteen(std::string canteen_name) : name(canteen_name) {}
-
+    Canteen(){};
     std::string &getName() { return name; }
     void addWindow(Window &window) { windows.push_back(window); }
     std::vector<Window> &getWindows() { return windows; }
 };
-class Node
-{
-public:
-    Canteen canteen;
-    Node *next;
 
-    Node(Canteen canteen)
-        : canteen(canteen), next(nullptr) {}
-};
+
 
 #endif

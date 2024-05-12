@@ -1,6 +1,24 @@
 #include <../include/admin.h>
 #include <../include/user.h>
 
+// 生成菜单
+// void generateMenu(const std::vector<Canteen> &canteens)
+// {
+//     std::cout << "Menu:" << std::endl;
+//     for (const auto &canteen : canteens)
+//     {
+//         std::cout << "In " << canteen.getName() << ":" << std::endl;
+//         for (const auto &window : canteen.getWindows())
+//         {
+//             std::cout << "- Window: " << window.getName() << std::endl;
+//             for (const auto &dish : window.getDishes())
+//             {
+//                 std::cout << "  - " << dish.getName() << ": $" << dish.getPrice() << std::endl;
+//             }
+//         }
+//     }
+// }
+
 int main()
 {
 
@@ -25,27 +43,17 @@ int main()
     // 将饭堂添加到管理员管理列表
     admin.addCanteen(canteen1);
     admin.addCanteen(canteen2);
-
+    // admin.addCanteen(canteen2);
+    // admin.addCanteen(canteen2);
+    // admin.addCanteen(canteen2);
     // 创建用户对象
-    User user(admin.getCanteens());
+    User user = User(admin.getHead());
 
-    
-    // 显示所有饭堂信息
-    user.displayCanteens(user.canteens);
+    user.selectProcess();
+    // // 显示所有饭堂信息
+    // user.displayCanteens(user.getHead());
 
-    // 显示第一个饭堂的窗口信息
-     Canteen firstCanteen = user.canteens[0];
-    user.displayWindows(firstCanteen);
-
-    // 显示第一个窗口的菜品信息
-    Window firstWindow = user.canteens[0].getWindows()[0];
-    user.displayDishes(firstWindow);
-
-    // 根据口味搜索菜品
-    user.searchDishesByTaste(user.canteens, "微辣");
-
-    // 根据菜品名称搜索菜品
-    user.searchDishesByName(user.canteens, "番茄炒蛋");
+    // // 显示第一个饭堂的窗口信
 
     return 0;
 }

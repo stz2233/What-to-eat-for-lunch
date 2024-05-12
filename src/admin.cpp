@@ -1,9 +1,16 @@
 #include<../include/admin.h>
 
+Admin::Admin(){
+    head = new LinkedList();
+}
+
+Admin::~Admin(){
+    delete head;
+}
 
 void Admin::addCanteen(Canteen& canteen) {
     // 添加饭堂到饭堂列表
-    canteens.push_back(canteen);
+    head->addNode(canteen);
 }
 
 void Admin::addWindow(Canteen& canteen,  std::string& windowName) {
@@ -52,6 +59,11 @@ void Admin::deleteDish(Window& window,  std::string& dishName) {
         dishes.erase(it);
     }
 }
+
+LinkedList *Admin::getHead()
+    {
+        return head;
+    }
 
 void Admin::sortCanteensByPrice(std::vector<Canteen>& canteens) {
     // 对饭堂列表按价格排序
