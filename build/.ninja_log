@@ -1,0 +1,9 @@
+# ninja log v5
+1	259	1715524153247816698	CMakeFiles/FoodManagementSystem.dir/src/main.cpp.o	e19bb4ff0eb7c972
+1	284	1715523959923817826	CMakeFiles/FoodManagementSystem.dir/src/node.cpp.o	97649c2b915977a6
+1	287	1715523959927817826	CMakeFiles/FoodManagementSystem.dir/src/user.cpp.o	90e3e4c8c9bb0df4
+0	359	1715524188319816493	CMakeFiles/FoodManagementSystem.dir/src/admin.cpp.o	10f5d9b0713fa4bd
+359	411	1715524188371816493	FoodManagementSystem	8e5158aa3a609104
+0	424	1715526249267999616	CMakeFiles/FoodManagementSystem.dir/src/main.cpp.o	e19bb4ff0eb7c972
+0	458	1715526249331999615	CMakeFiles/FoodManagementSystem.dir/src/admin.cpp.o	10f5d9b0713fa4bd
+458	515	1715526249387999615	FoodManagementSystem	8e5158aa3a609104
