@@ -9,6 +9,7 @@ private:
 public:
     Admin();
      ~Admin();
+     void selectProcess();
     void addCanteen(Canteen &canteen);
     void addWindow(Canteen &canteen, std::string &windowName);
     void addDish(Window &window, std::string &dishName, double price, std::string &taste);
@@ -18,6 +19,5 @@ public:
     void sortCanteensByPrice(std::vector<Canteen> &canteens);
     void sortWindowsByPrice(Canteen &canteen);
     void sortDishesByPrice(Window &window);
-    bool selectProcess();
     LinkedList *getHead();
 };

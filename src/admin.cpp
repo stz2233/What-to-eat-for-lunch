@@ -7,6 +7,11 @@ Admin::Admin(){
 Admin::~Admin(){
     delete head;
 }
+ 
+void Admin::selectProcess(){
+
+    
+}
 
 void Admin::addCanteen(Canteen& canteen) {
     // 添加饭堂到饭堂列表

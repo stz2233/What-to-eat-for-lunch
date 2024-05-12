@@ -8,7 +8,7 @@ bool User::selectProcess()
 {
     int choice;
     std::cout << "1. 查看饭堂信息" << std::endl;
-    std::cout << "1. 查找菜品" << std::endl;
+    std::cout << "2. 查找菜品" << std::endl;
     std::cout << "其他. 返回" << std::endl;
     std::cin >> choice;
     switch (choice)
