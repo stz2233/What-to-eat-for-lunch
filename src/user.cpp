@@ -1,6 +1,6 @@
 #include <../include/user.h>
 
-User::User(LinkedList *temp) : head(temp)
+User::User(LinkedList *temp) : head(&*temp)
 {
 }
 
@@ -127,7 +127,7 @@ void User::searchDishesByTaste(std::vector<Canteen> &canteens, std::string taste
             {
                 for (auto &dish : window.getDishes())
                 {
-                    if (hasCommonCharacter(dish.getTaste() ,taste))
+                    if (dish.getTaste() == taste)
                     {
                         std::cout << "- 名称：" << dish.getName() << "，价格：" << dish.getPrice() << "，窗口：" << window.getName() << "，饭堂：" << canteen_temp.getName() << std::endl;
                     }
@@ -155,7 +155,7 @@ void User::searchDishesByName(std::vector<Canteen> &canteens, std::string name)
             {
                 for (auto &dish : window.getDishes())
                 {
-                    if (hasCommonCharacter(dish.getName(), name))
+                    if (dish.getName()== name)
                     {
                         std::cout << "- 名称：" << dish.getName() << "，价格：" << dish.getPrice() << "，窗口：" << window.getName() << "，饭堂：" << canteen_temp.getName() << std::endl;
                     }

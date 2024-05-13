@@ -2,11 +2,12 @@
 #include<node.h>
 class User
 {
-    LinkedList *head;
+    
 public:
+    LinkedList *head;
     std::vector<Canteen> canteens;
     User(LinkedList *temp) ;
-
+    User(){};
     void displayCanteens(LinkedList *head) ;
     void displayWindows(Canteen &canteen,int sumber);
     void displayDishes(Window &window,int sumber);

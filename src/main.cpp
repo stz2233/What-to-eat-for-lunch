@@ -19,6 +19,8 @@
 //     }
 // }
 
+LinkedList head;
+
 int main()
 {
 
@@ -43,17 +45,45 @@ int main()
     // 将饭堂添加到管理员管理列表
     admin.addCanteen(canteen1);
     admin.addCanteen(canteen2);
+    // head=admin.head;
     // admin.addCanteen(canteen2);
     // admin.addCanteen(canteen2);
     // admin.addCanteen(canteen2);
     // 创建用户对象
-    User user = User(admin.getHead());
-
-    user.selectProcess();
-    // // 显示所有饭堂信息
-    // user.displayCanteens(user.getHead());
-
-    // // 显示第一个饭堂的窗口信
-
+    User user;
+    std::string mima;
+    std::string nnn = "12345678";
+    while (true)
+    {
+        user.head = admin.head;
+        std::cout << "选择登录模式" << std::endl;
+        std::cout << "管理员：0" << std::endl;
+        std::cout << "用户：1" << std::endl;
+        std::cout << "退出: 其他" << std::endl;
+        char chioes;
+        std::cin >> chioes;
+        if (chioes == '0')
+        {
+            std::cout << "输入密码" << std::endl;
+            std::cin >> mima;
+            if (mima == nnn)
+            {
+                admin.selectProcess();
+            }
+            else
+            {
+                std::cout << "密码错误" << std::endl;
+                std::cout << std::endl;
+            }
+        }
+        else if (chioes == '1')
+        {
+            user.selectProcess();
+        }
+        else
+        {
+            return 0;
+        }
+    }
     return 0;
 }

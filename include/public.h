@@ -24,6 +24,13 @@ public:
     std::string &getName() { return name; }
     double getPrice() { return price; }
     std::string &getTaste() { return taste; }
+
+    void setDish(std::string dish_name, double dish_price, std::string dish_taste)
+    {
+        name = dish_name;
+        price = dish_price;
+        taste = dish_taste;
+    }
 };
 
 // 窗口类
@@ -31,13 +38,15 @@ class Window
 {
 private:
     std::string name;
-    std::vector<Dish> dishes;
+    
 
 public:
+    std::vector<Dish> dishes;
     Window(std::string window_name) : name(window_name) {}
 
     std::string &getName() { return name; }
     void addDish(Dish &dish) { dishes.push_back(dish); }
+    void setWindow(std::string window_name){name=window_name;}
     std::vector<Dish> &getDishes() { return dishes; }
 };
 
@@ -46,13 +55,17 @@ class Canteen
 {
 private:
     std::string name;
-    std::vector<Window> windows;
+    
 
 public:
+    std::vector<Window> windows;
     Canteen(std::string canteen_name) : name(canteen_name) {}
     Canteen(){};
     std::string &getName() { return name; }
     void addWindow(Window &window) { windows.push_back(window); }
+    void setCanteen(const std::string &canteen_name)
+    {name=canteen_name;
+    }
     std::vector<Window> &getWindows() { return windows; }
 };
 

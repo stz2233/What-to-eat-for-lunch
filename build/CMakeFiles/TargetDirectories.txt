@@ -1,3 +1,0 @@
-/home/zz/code/数据结构/What-to-eat-for-lunch/build/CMakeFiles/FoodManagementSystem.dir
-/home/zz/code/数据结构/What-to-eat-for-lunch/build/CMakeFiles/edit_cache.dir
-/home/zz/code/数据结构/What-to-eat-for-lunch/build/CMakeFiles/rebuild_cache.dir

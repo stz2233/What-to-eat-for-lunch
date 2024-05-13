@@ -7,7 +7,7 @@ class Node
 {
 public:
     Canteen canteen;      // 节点存储的数据
-    Node *next = nullptr; // 指向下一个节点的指针
+    Node *next ; // 指向下一个节点的指针
 
     // 构造函数，初始化节点数据和指针
     Node(Canteen canteenData) : canteen(canteenData), next(nullptr) {}
@@ -36,7 +36,9 @@ public:
     // 查找节点（优化后，利用traverseAndExecute函数）
     Node *findNode(const std::string &canteenName);
 
-    bool printList( int &number,Canteen & canteen);
+    bool printList( int &number,Canteen  *&canteen);
+
+    bool printList( int &number,Canteen  &canteen);
 };
 
 
